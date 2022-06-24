@@ -1,0 +1,72 @@
+.table_header, .table_row{
+    border-bottom: 2px solid gray ;
+    height: 100px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   box-sizing: border-box;
+   
+}
+.table_row{
+    background-color: rgb(246, 244, 249);
+}
+.table_header>*, .table_row>*{
+    width: 25%;
+    padding: 5px 10px;
+}
+.table_header{
+    font-weight: bold;
+    background-color: rgb(237, 237, 237);
+}
+.main_table{
+    margin: 0 auto 40px;
+}
+.open, .redact{
+    margin: 5px;
+    padding: 0;
+    width: 20px;
+}
+.open:hover, .redact:hover{
+    cursor: pointer;
+}
+.open>img, .redact>img{
+    width: 100%;
+
+}
+.hidden{
+    position: relative;
+    display: none;
+    
+}
+.more_info{
+    background-color: #fff;
+}
+.more_info_item{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray ;
+    align-items: center;
+    
+    
+}
+.more_info_item p, .integration_info p{
+    width: 70%;
+    padding: 10px;
+    
+}
+.more_info_item h1, .integration_info h1{
+    font-size: 1rem;
+    padding: 5px;
+    width: 30%;
+    color: rgb(16, 16, 18);
+    
+}
+.integration{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid gray;
+
+}
+.integration_info{
+    width: 30%;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="table.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реестр информационных систем</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <div class="wrapper"><a href="index.html">Реестр информационных систем участника домена</a></div>
+        <div id="loginButton">Войти</div>
+      </div>
+    </header>
+    <main>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="#" class="container" id="loginForm">
+            <h1>Авторизация</h1>
+            <label for="uname">Логин</label>
+            <input
+              type="text"
+              placeholder="Введите логин"
+              name="uname"
+              id="login"
+              required
+            />
+
+            <label for="psw">Пароль</label>
+            <input
+              type="password"
+              placeholder="Введите пароль"
+              name="psw"
+              id="password"
+              required
+            />
+
+            <input type="submit" value="Войти" />
+          </form>
+          <script>
+            let form = document.querySelector("#loginForm");
+            let login = document.querySelector("#login");
+            let pass = document.querySelector("#password");
+
+            form.addEventListener("submit", function (event) {
+              event.preventDefault();
+              if (login.value === "admin" && pass.value === "123") {
+                window.location.href = "reestr3.html";
+              } else {
+                let div = document.createElement("div");
+                div.className = "alert";
+                div.innerHTML = "Логин или пароль не верны";
+                form.prepend(div);
+              }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="container">
+        <div class="organisation__list">
+          <label for="organisation">Организация:</label>
+          <datalist id="organisation_list">
+            <select name="organisation">
+              <option
+                value="Федеральная служба по надзору в сфере природопользования"
+                id="FSNSP"
+              >
+                Федеральная служба по надзору в сфере природопользования
+              </option>
+              <option value="Роспатент (ФОИВ)" id="Rospatent">
+                Роспатент (ФОИВ)
+              </option>
+            </select>
+          </datalist>
+          <input
+            type="text"
+            name="”organisation”"
+            id="”organisation”"
+            list="organisation_list"
+          />
+        </div>
+        <div class="main_table">
+          <div class="table_header">
+            <div class="orgType">Организация</div>
+            <div class="shortName">Краткое название ИС</div>
+            <div class="fullName">Полное название ИС</div>
+            <div class="ownerType">Тип владельца ИС</div>
+            <div class="redact"></div>
+            <div class="open"></div>
+            
+          </div>
+          <div class="table_row">
+            <div class="orgType">
+              Федеральная служба по надзору в сфере природопользования
+            </div>
+            <div class="shortName">ПТК "Госконтроль"</div>
+            <div class="fullName">
+              ФГИС: Программно – технологический комплекс "Госконтроль"
+            </div>
+            <div class="ownerType">федеральный</div>
+            <a href="redact1.html" class="redact"><img src="2910768.png" alt=""></a>
+            <div class="open">
+              <img src="drop-down-list-arrow.png" alt="" id="1" class="openMoreInfo"></a>
+
+            </div>
+           
+            
+          </div>
+          <div class="more_info hidden" id="info1">
+
+
+            <div class="more_info_item"><h1>Описание основных функций ИС</h1>
+                <p>«ПТК «Госконтроль» предназначен для автоматизации процессов контрольно-надзорной, судебной деятельности, ведения административных расследований, нормирования негативного воздействия на окружающую среду, ведения учета и контроля негативного воздействия и администрирования доходов федерального бюджета в области ответственности Росприроднадзора, предоставления государственных и муниципальных услуг, оказываемых Росприроднадзором, получения и обработки отчетов от природопользователей, формирования консолидированной отчетности по направлениям деятельности и предоставление ее в государственные органы власти.»</p></div>
+            
+            
+            
+            <div class="more_info_item"><h1>Уровень эксплуатации ИС</h1>
+                <p>федеральный</p></div>
+                <div class="more_info_item"><h1>Вид ИТ продукта</h1>
+                    <p>Заказная разработка</p></div>
+            <div class="more_info_item"><h1>Вендор-продукт</h1>
+                <p>ООО "Большая тройка"</p></div>
+            
+            <div class="more_info_item"><h1>Технологический (DEV) стек</h1>
+                <p>ФРОНТ: JS (Angular), CSS, HTML
+                    БЭК: Бэк Laravel (PHP)
+                    БД: MongoDB
+                    Интеграция: API xml, СМЭВ 3
+                </p>
+            </div>
+            <div class="more_info_item"><h1>Размещение компонентов ИС</h1>
+                        <p>ЦОД , ТО</p></div>
+            <div class="more_info_item"><h1>Допустимое время простоя системы при сбоях</h1>
+                <p>1 д.</p>
+            </div>
+            <div class="more_info_item"><h1>Влияние на организацию простоя системы сверх допустимого времени</h1>
+                <p>Функционирование в полном объеме с повышенными трудозатратами</p>
+            </div>
+            <div class="more_info_item"><h1>Целевой статус</h1>
+                <p>Целевое решение</p>
+            </div>
+            <div class="more_info_item"><h1>Статус объекта</h1>
+                <p>Выведен в эксплуатации</p>
+            </div>
+            <div class="more_info_item"><h1>Этап реализации</h1>
+                <p>Промышленная эксплуатация</p>
+            </div>
+            <div class="more_info_item"><h1>Дата ввода в эксплуатацию</h1>
+                <p>10/5/2009	</p>
+            </div>
+            <div class="more_info_item"><h1>Дата вывода из эксплуатации</h1>
+                <p>не планируется</p>
+            </div>
+            <div class="more_info_item"><h1>Курирующий архитектор</h1>
+                <p>Оболонская Елена Николаевна</p>
+            </div>
+            <div class="more_info_item"><h1>Способ связи с курирующим архитектором</h1>
+                <p>(499) 254-5072 доб. 99425</p>
+            </div>
+            <div class="more_info_item"><h1>Подразделение бизнес-владелец (Организационная единица)</h1>
+                <p>Управление координации проектной деятельности и информатизации</p>
+            </div>
+            <div class="more_info_item"><h1>Команда сопровождения</h1>
+                <p>ФГБУ "Федеральный центр анализа и оценки техногенного воздействия"</p>
+            </div>
+            <div class="more_info_item"><h1>Состав данных АС</h1>
+                <p>Программное обеспечение ПТК Госконтроль содержит следующие функциональные подсистемы:
+                     отчеты;
+                     разрешительные документы;
+                     лицензии;
+                     государственные услуги;
+                     администрирование доходов;
+                     ГРОРО;
+                     СМЭВ;
+                     КНД;
+                     аналитическая отчетность;
+                     личный кабинет природопользователя.	</p>
+            </div>
+            <div class="more_info_item"><h1>Категория информации</h1>
+                <p>Иное</p>
+            </div>
+            <div class="more_info_item"><h1>Комментарии, риски, проблемы</h1>
+                <p></p>
+            </div>
+            <div class="integration">
+                <div class="integration_info">
+                    <h1>Способ интеграции</h1>
+                    <p>СМЭВ 3</p>
+                </div>
+                <div class="integration_info"><h1>Данные</h1><p>Запрос сведений из разрешительной документации, предусмотренной Конвенцией о международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения, от 3 марта 1973 года (СИТЕС)</p></div>
+                <div class="integration_info"><h1>Комментарий</h1><p>VS02535v002-RPRN01</p></div>
+            </div>
+    
+        </div>
+        <div class="table_row">
+            <div class="orgType">
+              Федеральная служба по надзору в сфере природопользования
+            </div>
+            <div class="shortName">ПТО УОНВОС</div>
+            <div class="fullName">
+                Программно-техническое обеспечение учета объектов, оказывающих негативное воздействие на окружающую среду
+            </div>
+            <div class="ownerType">федеральный</div>
+            <a href="redact2.html" class="redact"><img src="2910768.png" alt=""></a>
+            <div class="open">
+              <img src="drop-down-list-arrow.png" alt="" id="2" class="openMoreInfo"></a>
+
+            </div>
+            
+          </div>
+          <div class="more_info hidden" id="info2">
+            <div class="more_info_item"><h1>Описание основных функций ИС</h1>
+                <p>«ПТК «Госконтроль» предназначен для автоматизации процессов контрольно-надзорной, судебной деятельности, ведения административных расследований, нормирования негативного воздействия на окружающую среду, ведения учета и контроля негативного воздействия и администрирования доходов федерального бюджета в области ответственности Росприроднадзора, предоставления государственных и муниципальных услуг, оказываемых Росприроднадзором, получения и обработки отчетов от природопользователей, формирования консолидированной отчетности по направлениям деятельности и предоставление ее в государственные органы власти.»</p></div>
+            
+            
+            
+            <div class="more_info_item"><h1>Уровень эксплуатации ИС</h1>
+                <p>федеральный</p></div>
+                <div class="more_info_item"><h1>Вид ИТ продукта</h1>
+                    <p>Заказная разработка</p></div>
+            <div class="more_info_item"><h1>Вендор-продукт</h1>
+                <p>ООО "Большая тройка"</p></div>
+            
+            <div class="more_info_item"><h1>Технологический (DEV) стек</h1>
+                <p>ФРОНТ: JS (Angular), CSS, HTML
+                    БЭК: Бэк Laravel (PHP)
+                    БД: MongoDB
+                    Интеграция: API xml, СМЭВ 3
+                </p>
+            </div>
+            <div class="more_info_item"><h1>Размещение компонентов ИС</h1>
+                        <p>ЦОД , ТО</p></div>
+            <div class="more_info_item"><h1>Допустимое время простоя системы при сбоях</h1>
+                <p>1 д.</p>
+            </div>
+            <div class="more_info_item"><h1>Влияние на организацию простоя системы сверх допустимого времени</h1>
+                <p>Функционирование в полном объеме с повышенными трудозатратами</p>
+            </div>
+            <div class="more_info_item"><h1>Целевой статус</h1>
+                <p>Целевое решение</p>
+            </div>
+            <div class="more_info_item"><h1>Статус объекта</h1>
+                <p>Выведен в эксплуатации</p>
+            </div>
+            <div class="more_info_item"><h1>Этап реализации</h1>
+                <p>Промышленная эксплуатация</p>
+            </div>
+            <div class="more_info_item"><h1>Дата ввода в эксплуатацию</h1>
+                <p>10/5/2009	</p>
+            </div>
+            <div class="more_info_item"><h1>Дата вывода из эксплуатации</h1>
+                <p>не планируется</p>
+            </div>
+            <div class="more_info_item"><h1>Курирующий архитектор</h1>
+                <p>Оболонская Елена Николаевна</p>
+            </div>
+            <div class="more_info_item"><h1>Способ связи с курирующим архитектором</h1>
+                <p>(499) 254-5072 доб. 99425</p>
+            </div>
+            <div class="more_info_item"><h1>Подразделение бизнес-владелец (Организационная единица)</h1>
+                <p>Управление координации проектной деятельности и информатизации</p>
+            </div>
+            <div class="more_info_item"><h1>Команда сопровождения</h1>
+                <p>ФГБУ "Федеральный центр анализа и оценки техногенного воздействия"</p>
+            </div>
+            <div class="more_info_item"><h1>Состав данных АС</h1>
+                <p>Программное обеспечение ПТК Госконтроль содержит следующие функциональные подсистемы:
+                     отчеты;
+                     разрешительные документы;
+                     лицензии;
+                     государственные услуги;
+                     администрирование доходов;
+                     ГРОРО;
+                     СМЭВ;
+                     КНД;
+                     аналитическая отчетность;
+                     личный кабинет природопользователя.	</p>
+            </div>
+            <div class="more_info_item"><h1>Категория информации</h1>
+                <p>Иное</p>
+            </div>
+            <div class="more_info_item"><h1>Комментарии, риски, проблемы</h1>
+                <p></p>
+            </div>
+            <div class="integration">
+                <div class="integration_info">
+                    <h1>Способ интеграции</h1>
+                    <p>СМЭВ 3</p>
+                </div>
+                <div class="integration_info"><h1>Данные</h1><p>Запрос сведений из разрешительной документации, предусмотренной Конвенцией о международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения, от 3 марта 1973 года (СИТЕС)</p></div>
+                <div class="integration_info"><h1>Комментарий</h1><p>VS02535v002-RPRN01</p></div>
+            </div>
+          </div>
+        </div>
+    </main>
+    <footer>
+      <div class="container">© 2022 ФКУ «Государственные технологии»</div>
+    </footer>
+    <script src="modal.js"></script>
+    <script>
+        let table = document.querySelector(".main_table");
+        
+        table.addEventListener("click", function(event){
+        console.log(event.target.className);
+        console.log(event.target.id);
+        if(event.target.className === "openMoreInfo"){
+            
+            let moreInfo = document.querySelector("#info" + event.target.id);
+            console.log(moreInfo);
+            if(moreInfo.classList.contains('hidden')){
+                moreInfo.classList.remove('hidden');
+            }else {
+                moreInfo.classList.add('hidden');
+            }
+            
+
+        }
+    });
+
+    function showInfo(){
+    if(this.classList.contains('hidden')){
+        this.classList.remove('hidden');
+    }else {
+        this.classList.add('hidden');
+    }
+}
+    </script>
+  </body>
+</html>
