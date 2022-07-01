@@ -7,8 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/tabs.css" />
-
-    <script src="js/data.js"></script>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/t890.css">
   </head>
   <body>
     <header>
@@ -17,155 +17,324 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="tabs">
-          <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked />
-          <label for="tab-btn-1">Редактировать ИС</label>
-          <input type="radio" name="tab-btn" id="tab-btn-2" value="" />
-          <label for="tab-btn-2">Интеграции ИС</label>
-          <input type="radio" name="tab-btn" id="tab-btn-3" value="" />
-          <label for="tab-btn-3">Анкета зрелости ИС</label>
+      <div class="main">
+        <div class="container">
+          <div class="tabs">
+            <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked />
+            <label for="tab-btn-1">Редактировать ИС</label>
+            <input type="radio" name="tab-btn" id="tab-btn-2" value="" />
+            <label for="tab-btn-2">Интеграции ИС</label>
+            <input type="radio" name="tab-btn" id="tab-btn-3" value="" />
+            <label for="tab-btn-3">Анкета зрелости ИС</label>
+  
+            <div id="content-1">
+              <div class="more_info_item">
+                <h1>Организация</h1>
+                <select>
+                  <option>
+                    Федеральная служба по надзору в сфере природопользования
+                  </option>
+                  <option>Роспатент (ФОИВ)</option>
+                </select>
+              </div>
+              <div class="more_info_item">
+                <h1>Краткое название ИС</h1>
+                <textarea name="" id="" rows="1">ПТК «Госконтроль» </textarea>
+              </div>
+              <div class="more_info_item">
+                  <h1>Полное название ИС</h1>
+                  <textarea name="" id="" cols="30" rows="1">ФГИС: Программно – технологический комплекс «Госконтроль</textarea>
+              </div>
+  
+              <div class="more_info_item">
+                <h1>Описание основных функций ИС</h1>
+                <textarea name="" id="" rows="7">
+  «ПТК «Госконтроль» предназначен для автоматизации процессов контрольно-надзорной, судебной деятельности, ведения административных расследований, нормирования негативного воздействия на окружающую среду, ведения учета и контроля негативного воздействия и администрирования доходов федерального бюджета в области ответственности Росприроднадзора, предоставления государственных и муниципальных услуг, оказываемых Росприроднадзором, получения и обработки отчетов от природопользователей, формирования консолидированной отчетности по направлениям деятельности и предоставление ее в государственные органы власти.»</textarea
+                >
+              </div>
+              <div class="more_info_item">
+                <h1>Уровень эксплуатации ИС</h1>
+                <select>
+                  <option>федеральный</option>
+                </select>
+              </div>
+              <div class="more_info_item">
+                <h1>Вид ИТ продукта</h1>
+                <select>
+                  <option>Заказная разработка</option>
+                </select>
+              </div>
+              <div class="more_info_item">
+                <h1>Вендор-продукт</h1>
+                <textarea name="" id="" cols="30" rows="1">
+  ООО "Большая тройка"</textarea
+                >
+              </div>
+  
+              <div class="more_info_item">
+                <h1>Технологический (DEV) стек</h1>
+                <textarea name="" id="" cols="30" rows="3">
+  ФРОНТ: JS (Angular), CSS, HTML 
+  БЭК: Бэк Laravel (PHP) 
+  БД: MongoDB Интеграция: API xml, СМЭВ 3</textarea
+                >
+              </div>
+              <div class="more_info_item">
+                <h1>Размещение компонентов ИС</h1>
+                <textarea name="" id="" cols="30" rows="1">ЦОД , ТО</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Допустимое время простоя системы при сбоях</h1>
+                <textarea name="" id="" cols="30" rows="1">1 д.</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>
+                  Влияние на организацию простоя системы сверх допустимого времени
+                </h1>
+                <textarea name="" id="" cols="30" rows="1">Функционирование в полном объеме с повышенными трудозатратами</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Целевой статус</h1>
+                <textarea name="" id="" cols="30" rows="1">Целевое решение</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Статус объекта</h1>
+                <textarea name="" id="" cols="30" rows="1">Выведен в эксплуатации</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Этап реализации</h1>
+                <textarea name="" id="" cols="30" rows="1">Промышленная эксплуатация</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Дата ввода в эксплуатацию</h1>
+                <input type="date" name="" id="" value="2009-05-10" >
+              </div>
+              <div class="more_info_item">
+                <h1>Дата вывода из эксплуатации</h1>
+                <textarea name="" id="" cols="30" rows="1">не планируется</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Курирующий архитектор</h1>
+                <textarea name="" id="" cols="30" rows="1">Оболонская Елена Николаевна</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Способ связи с курирующим архитектором</h1>
+                <!-- <input type="tel"  required value="(499) 254-5072 доб. 99425"> -->
+                <textarea name="" id="" cols="30" rows="1">(499) 254-5072 доб. 99425</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Подразделение бизнес-владелец (Организационная единица)</h1>
+               <textarea name="" id="" cols="30" rows="1">Управление координации проектной деятельности и информатизации</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Команда сопровождения</h1>
+                <textarea name="" id="" cols="30" rows="2">ФГБУ "Федеральный центр анализа и оценки техногенного воздействия"</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Состав данных АС</h1>
+                <textarea name="" id="" cols="30" rows="5">Программное обеспечение ПТК Госконтроль содержит следующие функциональные подсистемы: 
+   отчеты;  разрешительные документы;  лицензии;  государственные услуги;   администрирование доходов;  ГРОРО;  СМЭВ;  КНД;  аналитическая отчетность;  личный кабинет природопользователя.</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Категория информации</h1>
+                <textarea name="" id="" cols="30" rows="1">Иное</textarea>
+              </div>
+              <div class="more_info_item">
+                <h1>Комментарии, риски, проблемы</h1>
+                <textarea name="" id="" cols="30" rows="5"></textarea>
+              </div>
+              <input type="button" value="Сохранить" id="save_info"/>
+            </div>
 
-          <div id="content-1">
-            <div class="more_info_item">
-              <h1>Организация</h1>
-              <select>
-                <option>
-                  Федеральная служба по надзору в сфере природопользования
-                </option>
-                <option>Роспатент (ФОИВ)</option>
-              </select>
+  
+          <div id="content-2">
+            <div class="integration">
+              <div class="more_info_item">
+                  <h1>Способ интеграции</h1>
+                  <textarea name="" id="" cols="30" rows="1">СМЭВ 3</textarea>
+              </div>
+              <div class="more_info_item">
+                  <h1>Данные</h1>
+                  <textarea name="" id="" cols="30" rows="5">Запрос сведений из разрешительной документации, предусмотренной Конвенцией о международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения, от 3 марта 1973 года (СИТЕС)</textarea>
+              </div>
+              <div class="more_info_item">
+                  <h1>Комментарий</h1>
+                  <textarea name="" id="" cols="30" rows="5">VS02535v002-RPRN01</textarea>
+              </div>
+              <input type="button" value="Сохранить" id="save_info"/>
             </div>
-            <div class="more_info_item">
-              <h1>Краткое название ИС</h1>
-              <textarea name="" id="" rows="1">ПТК «Госконтроль» </textarea>
-            </div>
-            <div class="more_info_item">
-                <h1>Полное название ИС</h1>
-                <textarea name="" id="" cols="30" rows="1">ФГИС: Программно – технологический комплекс «Госконтроль</textarea>
-            </div>
-
-            <div class="more_info_item">
-              <h1>Описание основных функций ИС</h1>
-              <textarea name="" id="" rows="7">
-«ПТК «Госконтроль» предназначен для автоматизации процессов контрольно-надзорной, судебной деятельности, ведения административных расследований, нормирования негативного воздействия на окружающую среду, ведения учета и контроля негативного воздействия и администрирования доходов федерального бюджета в области ответственности Росприроднадзора, предоставления государственных и муниципальных услуг, оказываемых Росприроднадзором, получения и обработки отчетов от природопользователей, формирования консолидированной отчетности по направлениям деятельности и предоставление ее в государственные органы власти.»</textarea
-              >
-            </div>
-            <div class="more_info_item">
-              <h1>Уровень эксплуатации ИС</h1>
-              <select>
-                <option>федеральный</option>
-              </select>
-            </div>
-            <div class="more_info_item">
-              <h1>Вид ИТ продукта</h1>
-              <select>
-                <option>Заказная разработка</option>
-              </select>
-            </div>
-            <div class="more_info_item">
-              <h1>Вендор-продукт</h1>
-              <textarea name="" id="" cols="30" rows="1">
-ООО "Большая тройка"</textarea
-              >
-            </div>
-
-            <div class="more_info_item">
-              <h1>Технологический (DEV) стек</h1>
-              <textarea name="" id="" cols="30" rows="3">
-ФРОНТ: JS (Angular), CSS, HTML 
-БЭК: Бэк Laravel (PHP) 
-БД: MongoDB Интеграция: API xml, СМЭВ 3</textarea
-              >
-            </div>
-            <div class="more_info_item">
-              <h1>Размещение компонентов ИС</h1>
-              <textarea name="" id="" cols="30" rows="1">ЦОД , ТО</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Допустимое время простоя системы при сбоях</h1>
-              <textarea name="" id="" cols="30" rows="1">1 д.</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>
-                Влияние на организацию простоя системы сверх допустимого времени
-              </h1>
-              <textarea name="" id="" cols="30" rows="1">Функционирование в полном объеме с повышенными трудозатратами</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Целевой статус</h1>
-              <textarea name="" id="" cols="30" rows="1">Целевое решение</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Статус объекта</h1>
-              <textarea name="" id="" cols="30" rows="1">Выведен в эксплуатации</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Этап реализации</h1>
-              <textarea name="" id="" cols="30" rows="1">Промышленная эксплуатация</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Дата ввода в эксплуатацию</h1>
-              <input type="date" name="" id="" value="2009-05-10" >
-            </div>
-            <div class="more_info_item">
-              <h1>Дата вывода из эксплуатации</h1>
-              <textarea name="" id="" cols="30" rows="1">не планируется</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Курирующий архитектор</h1>
-              <textarea name="" id="" cols="30" rows="1">Оболонская Елена Николаевна</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Способ связи с курирующим архитектором</h1>
-              <!-- <input type="tel"  required value="(499) 254-5072 доб. 99425"> -->
-              <textarea name="" id="" cols="30" rows="1">(499) 254-5072 доб. 99425</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Подразделение бизнес-владелец (Организационная единица)</h1>
-             <textarea name="" id="" cols="30" rows="1">Управление координации проектной деятельности и информатизации</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Команда сопровождения</h1>
-              <textarea name="" id="" cols="30" rows="2">ФГБУ "Федеральный центр анализа и оценки техногенного воздействия"</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Состав данных АС</h1>
-              <textarea name="" id="" cols="30" rows="5">Программное обеспечение ПТК Госконтроль содержит следующие функциональные подсистемы: 
- отчеты;  разрешительные документы;  лицензии;  государственные услуги;   администрирование доходов;  ГРОРО;  СМЭВ;  КНД;  аналитическая отчетность;  личный кабинет природопользователя.</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Категория информации</h1>
-              <textarea name="" id="" cols="30" rows="1">Иное</textarea>
-            </div>
-            <div class="more_info_item">
-              <h1>Комментарии, риски, проблемы</h1>
-              <textarea name="" id="" cols="30" rows="5"></textarea>
-            </div>
-            <input type="button" value="Сохранить" id="save_info"/>
           </div>
-         
-        
-
-        <div id="content-2">
-          <div class="integration">
-            <div class="more_info_item">
-                <h1>Способ интеграции</h1>
-                <textarea name="" id="" cols="30" rows="1">СМЭВ 3</textarea>
-            </div>
-            <div class="more_info_item">
-                <h1>Данные</h1>
-                <textarea name="" id="" cols="30" rows="5">Запрос сведений из разрешительной документации, предусмотренной Конвенцией о международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения, от 3 марта 1973 года (СИТЕС)</textarea>
-            </div>
-            <div class="more_info_item">
-                <h1>Комментарий</h1>
-                <textarea name="" id="" cols="30" rows="5">VS02535v002-RPRN01</textarea>
-            </div>
-            <input type="button" value="Сохранить" id="save_info"/>
-          </div>
+  
+          <div id="content-3">
+              <details>
+                  <summary>Описание ИС / Сервиса <i class="icon-edit"></i></summary>
+                  <table class="survey">
+                      <tr>
+                          <td class="survey_query">Краткое наименование ИС/сервиса</td>
+                          <td>ПТК "Госконтроль"</td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Описание ИС/сервиса</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Тех. cтек с указанием версий в разрезе:
+                              <!-- <pre>
+  - языки программирования
+  - базы данных
+  - шины данных
+  - сервера приложений (если используется)
+  - используемые сторонние программные продукты и фремворки (например, Camunda/WS02/ итп)
+  - базовые образы для контейнеров
+  - ОС на виртуальных машинах
+                              </pre> -->
+                              </td>
+                          <td><pre>
+  ОС - Debian 10, PostgreSQL
+  – язык программирования PHP 8 или выше;
+  – библиотеки PostGIS 2.2 или выше;
+  – библиотеки Angular 11 или выше;
+  – библиотеки Docker 18.09 / Swarm или выше;
+  – библиотеки Redis 5.0 или выше;
+  – библиотеки Golang 1.10 или выше;
+  – библиотеки libreoffice 6.0 или выше;
+  – библиотеки Laravel 8 или выше.
+                          </pre></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Численность команды разработки (включая аналитиков/тестировщиков и т.п.)</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Численность команды сопровождения</td>
+                          <td></td>
+                          
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Среднее количество бизнес-операций в день (включая нагрузку от пользователей и интегрированных систем)</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Среднее количество пользователей в день</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Частота релизов</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Сколько времени система находится в промышленном использовании</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td class="survey_query">Возможно ли переиспользование сервиса в других внешних решениях (да/нет)?</td>
+                          <td>Нет</td>
+                      </tr>
+                  </table>
+                  
+          </details>
+          <details>
+              <summary>Объем КТС</summary>
+              <table class="survey">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              </table>
+          </details>
+          <details>
+              <summary>Vendor Lock</summary>
+              <table class="survey">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              </table>
+          </details>
+          <details>
+              <summary>Cloude Native</summary>
+              <table class="survey">
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                      </tr>
+              </table>
+          </details>
+          <details>
+              <summary>Надежность</summary>
+              <table class="survey">
+                  
+              </table>
+          </details>
+          <details>
+              <summary>Эксплуатационные характеристики</summary>
+              <table class="survey">
+                      
+              </table>
+          </details>
+          <details>
+              <summary>Интеграции</summary>
+              <table class="survey">
+                      
+              </table>
+          </details>
+          <details>
+              <summary>Планы по развитию</summary>
+              <table class="survey">
+                      
+              </table>
+          </details>
+          <details>
+              <summary>Процессы: управление архитектурой</summary>
+              <table class="survey">
+                      
+              </table>
+          </details>
+      </div>
         </div>
-
-        <div id="content-3">Содержимое 3...</div>
+         <!-- t890 -->
+        
+         <a href="#top">
+          <div id="top_arrow" hidden> 
+            <svg role="presentation" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg"> 
+              <rect width="50" height="50" rx="50" fill="rgba(6,96,175)" fill-opacity="0.80" stroke="none" /> 
+              <path d="M14 28L25 18l10 10" stroke="#fff" stroke-width="2" fill="none"/> 
+            </svg> 
+          </div>
+        </a>
+        <script src="js/top_arrow.js"></script>
       </div>
     </main>
     <footer>

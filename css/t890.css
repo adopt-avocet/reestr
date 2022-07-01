@@ -1,0 +1,7 @@
+#top_arrow{
+    position:fixed; 
+    bottom:50px; 
+    right:10px;
+    /* box-shadow: 0 0 10px 0 #000;
+    border-radius: 50%; */
+}
