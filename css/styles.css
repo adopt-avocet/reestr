@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Roboto', Arial, sans-serif;
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;    
@@ -107,7 +108,7 @@ main{
 .container{
     width: 95%;
     min-width: 800px;
-    max-width: 1800px;
+    max-width: 1600px;
     margin: auto;
     /* overflow: auto;
     scroll-behavior: smooth; */
@@ -170,7 +171,11 @@ td{
     font: 1rem sans-serif;
     flex-grow: 1;
     padding: 5px;
+    border-radius: .2rem;
     margin-left: 20px;
+}
+.organisation__list>input:focus-visible{
+    outline: none;
 }
 
 
@@ -187,25 +192,8 @@ td{
  color: rgb(255, 255, 255);
 }
 
-.survey{
-    width: 100%;
-    margin: 10px auto;
-}
 
-.survey td{
-    padding: 20px 5px;
-}
-.survey_query{
-    width: 35%;
-    overflow: auto;
-    
-    font-weight: 700;
-    
-}
-.survey tr:hover{
-    background-color: #f0f0f0;
-   
-}
+
 
 .redact{
     color: #000;

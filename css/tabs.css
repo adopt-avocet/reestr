@@ -19,15 +19,14 @@
 .tabs > div {
   display: none;
   padding: 10px 15px;
-  
-  
 }
-
 
 /* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
 #tab-btn-1:checked ~ #content-1,
 #tab-btn-2:checked ~ #content-2,
-#tab-btn-3:checked ~ #content-3 {
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4,
+#tab-btn-5:checked ~ #content-5 {
   /* background-color: #fff; */
   margin-top: .2rem;
   border-top: .1rem solid #f0f0f0;
@@ -39,14 +38,16 @@
 
 .tabs > label {
   font-weight: 800;
-  color: #a2a2a2;
+  color: #000000a1;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   user-select: none;
   border-bottom: .2rem solid #fff; 
-  border-radius: .2rem;
-  padding: 5px 40px;
+  border-top-right-radius: .2rem;
+  border-top-left-radius: .2rem;
+  padding: .2rem 1rem;
+  padding-top: .4rem;
   line-height: 1.5;
   transition: color 0.15s ease-in-out, border-bottom 0.15s ease-in-out, background-color 0.15s ease-in-out;
   cursor: pointer;
@@ -55,6 +56,7 @@
 }
 .tabs > label:hover{
   background-color: #f0f0f0;
+  
   border-color: #f0f0f0;
 }
 /* .tabs > label:not(:first-of-type) {
@@ -62,19 +64,29 @@
 } */
 
 .tabs > input[type="radio"]:checked + label {
-  border-bottom: .2rem solid rgba(6,96,175); 
-  color: rgba(6,96,175);
+  border-bottom: .2rem solid rgba(6,96,175, 0.7); 
+  color: rgba(6,96,175, 0.9);
 }
 
 textarea, select{
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 700 ;
   width: 100%;
   padding: 10px;
-  
-  border-color: #a2a2a2;
-  border-radius: .2rem;
-  
-  
+   /*border: none;
+  border-bottom: 1px solid rgba(6,96,175, 0.5); 
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;*/
+  border-color: rgba(6,96,175, 0.3);
+  border-top-right-radius: .2rem;
+  border-top-left-radius: .2rem;
 }
+textarea:focus-visible, select:focus-visible {
+ outline: none;
+ border-color: rgba(6,96,175, 0.7);
+}
+
 
 #save_info{
   color: #ffffff;
@@ -96,13 +108,15 @@ summary {
   font-weight: bold;
   margin: -.5rem -.5rem 0;
   padding: 1rem;
+  border-radius: 0.2rem;
 }
 
 
 details {
   width: 100%;
   border: none;
-  padding: .5em .5em 0;
+  margin: .5em .5em 0;
+  border-radius: 0.2rem;
   /* border-bottom: .01rem solid #f0f0f0; */
   /* margin-bottom: 1rem; */
   /* border: 1px solid #aaa; */
@@ -111,7 +125,7 @@ details {
 }
 details[open] {
   padding-bottom: 2rem;
-  border-bottom: .1rem solid #f0f0f0;
+  /* border-bottom: .1rem solid #f0f0f0; */
 }
 
 details[open] summary {
@@ -121,14 +135,15 @@ details[open] summary {
   background-color: #f0f0f0;
  
 }
+
 .more_info_item{
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
   
 }
+
 .more_info_item h1{
   width: 30%;
   padding: 10px 10px 10px 0;
@@ -136,5 +151,74 @@ details[open] summary {
 /* .main{
 background-color: #fff;
 box-shadow: 0 3px 4px -2px #939393;
-
 } */
+.no_border{
+  width: 90%;
+  padding: .3rem .6rem;
+  margin: 0 .3rem;
+  border: none;
+}
+
+.no_border:focus-visible {
+  outline: none;
+  /* background-color: #f0f4ff; */
+  border-bottom: 1px solid rgba(6,96,175, 0.5);
+}
+
+.survey tr:hover, 
+.survey tr:hover .no_border,
+.survey tr:hover select {
+  background-color: #f0f4ff;
+}
+.survey{
+  width: 100%;
+  
+  margin: 10px auto;
+}
+
+.survey td, th{
+  
+  padding: 20px 10px;
+}
+.survey_query{
+  width: 35%;
+  overflow: auto;
+  font-weight: 700;
+}
+.src_type{
+  width: auto;
+}
+
+.info_src thead{
+  font-weight: 700;
+  
+  /* background-color: #f0f0f0; */
+  text-align: center;
+}
+table{
+  border-collapse: collapse;
+}
+.info_src th{
+  
+  border-bottom: 1px solid rgba(6,96,175, 0.5);
+  background-color: #f0f4ff;
+  
+}
+.info_src th:first-of-type{
+  border-top-left-radius: .2rem;
+}
+.info_src th:last-of-type{
+  border-top-right-radius: .2rem;
+}
+table td {
+  
+  border-left: 1px solid rgba(6,96,175,0.1);
+  border-right: 1px solid rgba(6,96,175,0.1);
+}
+.info_srs_add{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}

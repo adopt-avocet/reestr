@@ -10,7 +10,7 @@
     font-size: .9rem;
     font-weight: 600;
     line-height: 1.2rem;
-
+    height: 80px;
     /* variant 3 */
     /* background-color: #fff; */
 
@@ -53,6 +53,10 @@
     background-color: rgb(255, 255, 255);
     
 }
+.main_table a{
+    text-decoration: none;
+    color: black;
+}
 .open, .redact{
     margin: 0;
     padding: 0;
@@ -81,7 +85,7 @@
     border-radius: .2rem;
     margin: 10px 0;
     background-color: #fff;
-
+   
     
     
    /* variant 3 */
